@@ -10,7 +10,7 @@ public class WordScrambleEx1 {
 	public static void main(String[] args) {
 		String[] strArr = { "CHANGE", "LOVE", "HOPE", "VIEW" };
 
-		String answer = strArr[0];//getAnswer(strArr);
+		String answer = getAnswer(strArr);
 		String question = getScrambledWord(answer);
 
 		System.out.println("Question:" + question);
@@ -18,7 +18,7 @@ public class WordScrambleEx1 {
 	} // main
 
 	public static String getAnswer(String[] strArr) {
-		int temp = (int) (((Math.random() * 10)) % 4);
+		int temp = (int) (((Math.random() * 10)) % strArr.length);
 		return strArr[temp];
 	}
 
